@@ -36,18 +36,18 @@ class ProductManager{
 
     
     
-    
-    getProductById = (id) =>{
-        for(let i=0;i<this.products.length;i++){
-            if(this.products.includes(id,i)){
-                console.log("Se ha encontrado un producto que coincide con ese id")
-            }
-            else{
-                console.error("Not found");
-            }
+    getProductById = (idf) =>{       if(this.products.find(i =>i.id === idf)) {
+        console.log("Encontrado") }
+        else{
+            console.error("Not found")
         }
     }
+    
 
+
+    
+
+    
 
 }
 
@@ -63,8 +63,8 @@ productManager.addProduct("Banana","Banana ecuatoriana", 100, "https://img.freep
 productManager.getProducts();
 
 
-
-productManager.getProductById(1);
+productManager.getProductById(2);
+productManager.getProductById(4);
 
 console.log(productManager)
 
