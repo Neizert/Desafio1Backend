@@ -23,7 +23,7 @@ class ProductManager{
     
   
 
-    addProduct = (title,description,price,thumbnail,code,stock,id) => {   for(let i=0;i<this.products.length;i++){}
+    addProduct = (title,description,price,thumbnail,code,stock,id) => {   
         let nuevoProducto = new Product(title,description,price,thumbnail,code,stock,id);
         this.products.push(nuevoProducto);
         ProductManager.productId++;
